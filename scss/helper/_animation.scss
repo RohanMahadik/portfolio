@@ -1,0 +1,39 @@
+@keyframes shrink {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(0.7);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  @keyframes listingScaleBounceReverse {
+    0% {
+      transform: scale(1.2);
+    }
+    40% {
+      transform: scale(1);
+    }
+    60% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  @keyframes listingScaleBounce {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.2);
+    }
+    70% {
+      transform: scale(1.15);
+    }
+    100% {
+      transform: scale(1.2);
+    }
+  }

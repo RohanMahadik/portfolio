@@ -1,0 +1,45 @@
+.modal{
+    .btn-close{
+        position: absolute;
+        top: -1rem;
+        right: -1rem;
+        background-color:$primary;
+        opacity: 1;
+        border-radius: 50%;
+        width: 1.8rem;
+        height: 1.8rem;
+        border:0.2rem solid $yellow;
+        cursor: pointer;
+        z-index: 1;
+        &::before{
+            content: "\ea0f";
+            font-family: 'icomoon';
+            color: $yellow;
+            font-size: 1.2rem;
+        }
+    }
+    &-header{
+        border-bottom: 0;
+    }
+    &-content{
+        border-radius: 0;
+        background-color: $primary;
+        border: 0.2rem solid $yellow
+    }
+    .video-js {
+        .vjs-big-play-button{
+            height: 6rem;
+            width: 6rem;
+            border-radius: 50%;
+            background-color: $primary;
+            border: .3rem solid $yellow;
+            .vjs-icon-placeholder::before{
+                color: $yellow;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+    }
+   
+}

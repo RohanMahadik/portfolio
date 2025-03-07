@@ -1,0 +1,15 @@
+.title{
+    text-align: center;
+    font-size: 7rem;
+    color: $secondry;
+    text-shadow:  -0.2rem 0.4rem $yellow;
+}
+.padding-common{
+    padding-block: 4rem;
+}
+@media (max-width:$mobile-max-width) {
+    .title{
+        font-size: 5rem;
+        text-shadow:  -0.2rem 0.2rem $yellow;
+    }
+}

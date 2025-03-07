@@ -1,0 +1,52 @@
+.btn{
+    border-radius: unset;
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: $primary;
+    padding: 1rem 1.5rem;
+    transition: all 0.25s ease-in-out;
+    position: relative;
+    border: none;
+    display: flex;
+    align-items: center;
+    width: max-content;
+    &::before {
+        content: "";
+        width: 0;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 0;
+        transition: all 0.25s ease-in-out;
+        background: rgb(254,190,16);
+        background: linear-gradient(56deg, rgba(254,190,16,1) 41%, rgba(254,216,110,1) 64%, rgba(254,224,140,1) 84%, rgba(255,255,255,1) 99%);
+        
+    }
+    &:hover {
+        color: unset;
+        background-color: unset;
+        &::before {
+          width: 100%;
+        }
+    }
+    span{
+        padding-inline: 0.5rem;
+    }
+    &-primary{
+        background-color: $yellow;
+        &:hover{
+            color: $primary;
+        }
+    }
+    &-secondry{
+        background-color: $secondry;
+        color: $primary;
+        &:hover{
+            color: $primary;
+        }
+    }
+    [class^="icon"] , .btn-text{
+        z-index: 1;
+      }
+}

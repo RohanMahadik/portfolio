@@ -1,0 +1,53 @@
+/*Resume section css*/
+.resume{
+    &-experiance{
+        font-size: 4rem;
+        color: $secondry;
+        font-weight: 700;
+        padding-block: 2.5rem;
+        position: relative;
+        &::after{
+            content: '';
+            width: 100%;
+            height: .2rem;
+            display: block;
+            position: absolute;
+            bottom: 0;
+            background-image: linear-gradient(to right, rgb(255, 255, 255) 0%, rgb(244, 244, 125) 20%,rgb(238, 238, 36) 50%, #ffbd39 100%);
+        }
+    }
+    &-organizationlogo{
+        width: 8rem;
+        height: 8rem;
+        border-radius: 50%;
+        background-color: $secondry;
+        border: 0.2rem solid $yellow;
+    }
+    &-year{
+        font-size: 2rem;
+        font-weight: 700;    
+        color: $yellow;
+    }
+    &-designation{
+        color: $secondry;
+        font-size: 2.5rem;
+    }
+    &-organization{
+        color: $tertiary;
+        font-size:1.8rem;
+        font-weight: 500;
+    }
+    &-skilllist{
+        padding-left: 5rem;
+        list-style-type: disc;
+    }
+    &-skillitem{
+        font-size: 1.6rem;
+        color: $tertiary;
+        margin-block: 1.5rem;
+    }
+    img[alt^="vidhyanidhi"] { 
+       width: 100%;
+       background-color: $primary;
+      }
+}

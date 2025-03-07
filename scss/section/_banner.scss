@@ -1,0 +1,99 @@
+/*Banner Section Css*/
+.banner{
+    display: flex;
+    align-items: center;
+    &-thubmnail{
+        display: none;
+        height: 20rem;
+        width: 20rem;
+        background-color: $yellow;
+        border-radius: 50%;
+        border: 0.5rem solid $secondry;
+        margin-inline:auto;
+        margin-block: 10px;
+        overflow: hidden;
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+    }
+    &-greeting{
+        font-size: 3rem;
+        color: $yellow;
+        font-weight: 700;
+    }
+    &-name{
+        font-size: 5rem;
+        font-weight: 700;
+        margin-block: 1.5rem;
+        span{
+            color: $yellow;
+        }
+    }
+    &-profile{
+        font-size: 4rem;
+        font-weight: 700;
+        color: $yellow;
+    }
+    &-degswiper{
+        height: 5.5rem;
+    }
+    &-rightsection{
+        height: 50rem;
+        width: 50rem;
+        img{
+            width: 100%;
+            height: 100%;
+        }
+    }
+    &-profilecontainer{
+        width: 30rem;
+        height: 30rem;
+        border:0.1rem solid $secondry;
+        display: block;
+        position: absolute;
+        top: 15rem;
+        left: 12rem;
+        &::before{
+            content: '';
+            background-color:#e9ecef;
+            width: 100%;
+            height: 100%;
+            display: block;
+            position: absolute;
+            bottom: 3rem;
+            right: 3rem;
+            pointer-events: none;
+            background-position: 33%;
+            background-image: url('/images/rohan.png');
+        }
+    }
+    &-profileimg{
+        position: relative;
+    }
+    .icon-play{
+        display: inline-block;
+        animation: shrink 1s ease-in-out infinite; 
+    }
+}
+@media (max-width:$mobile-max-width) {
+  .banner{
+    &-rightsection{
+        display: none;
+    }
+    &-thubmnail{
+        display: block;
+    }
+    &-leftsection{
+        text-align: center;
+    } 
+    &-buttoncontainer{
+        justify-content: center;
+    }
+    &-name{
+        font-size: 4rem;
+    }
+  }
+  
+}

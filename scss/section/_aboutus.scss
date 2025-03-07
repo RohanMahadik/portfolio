@@ -1,0 +1,94 @@
+/*About us css*/
+.aboutus{
+    &-mobiletitle{
+        display: none;
+    }
+    &-img{
+        width: 15rem;
+        height: 15rem;
+        aspect-ratio: 1;
+        border-radius: 50%;
+        background-color: $yellow;
+        border: .5rem solid $secondry;
+        overflow: hidden;
+        img{
+            object-fit: contain;
+            width: 100%;
+            height: 100%;
+        }
+    }
+    &-skilltitle {
+        font-weight: 700;
+        color: $yellow;
+        font-size: 2rem;
+    }
+    &-intro{
+        line-height: 2.5rem;
+    }
+    &-counterwrapper{
+        font-weight: 700;
+        font-size: 2rem;
+    }
+    &-number{
+        color: $yellow;
+    }
+    .progress{
+        background-color: #1a1a1a;
+        height: 1.2rem;
+    }
+    .progress-bar{
+        background-color: $yellow;
+    }
+}
+
+
+@media (max-width:$mobile-max-width) {
+    .aboutus{
+        &-mobiletitle{
+            display: block;
+        }
+        &-desktoptitle{
+            display:none;
+        }
+        &-info{
+            text-align: center;
+            margin-top: -7rem;
+        }
+        &-img{
+            margin-bottom: 2rem;
+            margin-inline: auto;
+            width: 100%;
+            height: 100%;
+            border: 0;
+            border-radius: unset;
+            background: url('/images/pattern.svg') center/100% no-repeat;
+            position: relative;
+            img{
+                display: none;
+            }
+            &::before{
+                content: '';
+                border: 0.2rem solid $secondry;
+                width: 60%;
+                height: 50%;
+                display: block;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+            }
+            &::after{
+                content: '';
+                width: 60%;
+                height: 50%;
+                display: block;
+                position: absolute;
+                top: 45%;
+                left:45%;
+                transform: translate(-50%,-50%);
+                background: $yellow url('/images/mweb-img.png') center/75% no-repeat;
+            }
+
+        }
+    }
+}

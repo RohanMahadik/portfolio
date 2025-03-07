@@ -1,0 +1,66 @@
+/*Footer Css Start*/
+footer{
+    padding-block: 10rem;
+    .footer{
+        &-headinfo{
+            text-align: center;
+            margin-block: 4rem;
+        }
+        &-body{
+            margin-top: 8rem;
+        }
+        &-icon{
+            width: 10rem;
+            height: 10rem;
+            margin-inline: auto;
+            border-radius: 50%;
+            background:$gray;
+            span{
+                color: $yellow;
+                font-size: 3rem;
+            }
+        }
+        &-resumelink{
+            color: $tertiary;
+            &:hover{
+              color:$yellow; 
+            }
+        }
+        &-copyright{
+            margin-top: 7rem;
+        }
+        &-sociallinks{
+            margin-top: 8rem;
+        }
+        &-sociallinks{
+            gap: 1rem;
+        }
+        &-linkdata{
+            width: 5rem;
+            height: 5rem;
+            background:$gray;
+            color: $yellow;
+            border-radius: 50%;
+            font-size: 2rem;
+        }
+        &-address {
+            margin-bottom: 1.5rem;
+        }
+        &-content{
+            cursor: pointer;
+            transition: all 0.2s ease-in-out 0s;
+            &:hover{
+                .footer-icon{
+                    span{
+                        color: aliceblue;
+                    }
+                    
+                }
+            }
+        }
+        &-hidden{
+            visibility: hidden;
+        }
+    }
+   
+}

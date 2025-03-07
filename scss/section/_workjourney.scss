@@ -1,0 +1,263 @@
+/* Work Journey*/
+.journey {
+    &-section{
+        .swiper-button-prev,
+        .swiper-button-next{
+           display: none;
+        }
+    }
+    &-showmore {
+        text-transform: uppercase;
+        margin: 0 auto;
+        display: none;
+        position: relative;
+        z-index: 1;
+    }
+    &-swiper {
+        height: 73rem;
+        padding-inline: calc((100vw - 1140px) / 2);
+        
+    }
+    &-item {
+        display: flex;
+        flex-direction: column;
+        height: 36.5rem;
+        margin-left: unset;
+        padding-block: 2.5rem;
+        position: relative;
+        &::after {
+            content: "";
+            border-top: 0.05rem solid $secondry;
+            width: 100%;
+            height: unset;
+            top: 0;
+            left: calc(-1 * ((100vw - 1140px) / 2));
+            width: 100vw;
+            position: absolute;
+        }
+        &:nth-child(odd) {
+            align-self: flex-end;
+            .journey-image {
+                top: -10rem;
+                left: -2rem;
+            }
+            .journey-logo {
+                &::before {
+                    top: -5rem;
+                    left: 0.5rem;
+                }
+            }
+        }
+        &:nth-child(even) {
+            justify-content: end;
+            &::before {
+                top: unset;
+                bottom: -0.5rem;
+            }
+            &::after {
+                top: 100%;
+            }
+            .journey-content {
+                display: flex;
+                flex-direction: column-reverse;
+            }
+            .journey-detail {
+                margin-bottom: 0;
+                margin-top: 2rem;
+            }
+            .journey-wrap {
+                display: flex;
+                flex-direction: column-reverse;
+            }
+            .journey-image {
+                bottom: -10rem;
+                left: -2rem;
+            }
+            .journey-logo {
+                &::before {
+                    bottom: -5rem;
+                    left: 0.5rem;
+                }
+            }
+        }
+        &:first-child,
+        &:last-child {
+            &::before {
+                border: 0;
+                background: url("/images/blinker.svg") no-repeat 100%;
+                width: 3rem;
+                height: 3rem;
+                top: -1.5rem;
+                left: -0.9rem;
+            }
+        }
+        &::before {
+            content: "";
+            aspect-ratio: 1 / 1;
+            width: 1rem;
+            height: 1rem;
+            border-radius: 50%;
+            z-index: 2;
+            border: 0.2rem solid $yellow;
+            background-color: $primary;
+            position: absolute;
+            top: -0.5rem;
+        }
+    }
+    &-logo {
+        position: relative;
+        &::before {
+            content: "";
+            width: 0.1rem;
+            height: 2rem;
+            background: $secondry;
+            position: absolute;
+        }
+    }
+    &-image {
+        background-color: $secondry;
+        border: .2rem solid $yellow;
+        width: 5rem;
+        height: 5rem;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        overflow: hidden;
+
+    }
+    &-imagedata{
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+    &-year {
+        font-size: 2.2rem;
+        font-weight: 700;
+        background: -webkit-linear-gradient($yellow, $secondry);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        display: inline-block;
+    }
+    &-detail {
+        margin-bottom: 2rem;
+        color: $yellow;
+        font-weight: 700;
+    }
+    &-listdata {
+        list-style-type: disc;
+        padding-left: 3rem;
+    }
+    &-listitem {
+        margin-block: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .journey {
+        &-section {
+            padding-bottom: 4rem;
+            .swiper-button-prev,
+            .swiper-button-next{
+               display: none;
+            }
+        }
+        &-swiper {
+            height: unset;
+        }
+        &-list {
+            display: flex;
+            flex-direction: column;
+            height: 55rem;
+            &.open{
+                height: unset;
+                &::after{
+                    content: unset;
+                }
+            }
+            &::before {
+                content: "";
+                height: 100%;
+                width: 0.05rem;
+                background-color: $secondry;
+                position: absolute;
+                left: -1.5rem;
+            }
+            &::after{
+                content:'';
+                height: 10rem;
+                width:calc(100% + 8rem);
+                display: block;
+                left: -4rem;
+                position: absolute;
+                bottom:-4.2rem;
+                background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 100%);
+            }
+        }
+        &-item {
+            height: unset;
+            &::after {
+                content: unset;
+            }
+            &::before {
+                top: 4.5rem;
+                left: -1.9rem;
+                bottom: unset;
+            }
+            &:nth-child(even) {
+                &::before {
+                    top: 4.5rem;
+                    bottom: unset;
+                }
+                .journey-content {
+                    display: flex;
+                    flex-direction: column;
+                }
+                .journey-detail {
+                    margin-bottom: 2rem;
+                    margin-top: unset;
+                }
+                .journey-wrap {
+                    flex-direction: row;
+                }
+            }
+            &:first-child,
+            &:last-child {
+                &::before {
+                    top: 3.5rem;
+                    left: -2.9rem;
+                }
+            }
+        }
+        &-wrap {
+            flex-direction: row;
+            display: flex;
+            gap: 3rem;
+        }
+        &-image {
+            position: unset;
+        }
+        &-logo {
+            &::before {
+                content: unset;
+            }
+        }
+        &-showmore {
+            display: block;
+        }
+    }
+}
+@media (max-width: 1024px) {
+    .journey {
+        &-swiper {
+            padding-inline: 4rem;
+        }
+        &-item {
+            &::after {
+                left: unset;
+            }
+        }
+    }
+}

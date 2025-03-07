@@ -1,0 +1,41 @@
+.swiper{
+    position: static;
+    &-button-next,&-button-prev{
+        padding: 1rem;
+        border-radius: 50%;
+        height: 4rem;
+        width: 4rem;
+        background-color: $yellow;
+        border: .2rem solid $secondry;
+        top:7rem;
+        &::after{
+            font-size: 2rem;
+            color: $primary;
+            
+        }
+    }
+    .swiper-button-prev{
+        right: 15rem;
+        left: unset;
+    }
+    .swiper-button-next{
+        right: 10rem;
+        left: unset;
+    }
+}
+@media (max-width: 768px) {
+    .swiper{
+        &-button-next,&-button-prev{
+            top: 45rem;
+            margin: 0.5rem;
+        }
+        .swiper-button-prev{
+            right: 50%;
+            left: unset;
+        }
+        .swiper-button-next{
+            right: unset;
+            left:50%;
+        }
+    }
+}
