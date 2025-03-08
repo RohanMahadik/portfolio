@@ -277,11 +277,17 @@ header .navbar-brand {
 header .navbar-brand:hover {
   color: #ffffff;
 }
+header .navbar-brand img {
+  width: 5rem;
+}
 header .nav-link {
   color: #ffffff;
   font-size: 1.6rem;
   margin-inline: 2rem;
   position: relative;
+}
+header .nav-link:focus {
+  color: #ffffff;
 }
 header .nav-link::before {
   content: "";
@@ -985,10 +991,18 @@ footer .footer-hidden {
 .btn-primary {
   background-color: #FEBE10;
 }
+.btn-primary:focus {
+  background-color: #FEBE10;
+  color: #000000;
+}
 .btn-primary:hover {
   color: #000000;
 }
 .btn-secondry {
+  background-color: #ffffff;
+  color: #000000;
+}
+.btn-secondry:focus {
   background-color: #ffffff;
   color: #000000;
 }

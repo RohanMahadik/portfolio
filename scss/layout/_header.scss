@@ -9,13 +9,18 @@ header{
         &:hover{
             color: $secondry;
         }
-
+        img{
+            width: 5rem;
+        }
     }
     .nav-link{
         color: $secondry;
         font-size: 1.6rem;
         margin-inline: 2rem;
         position: relative;
+       &:focus{
+        color:$secondry;
+       }
         &::before{
             content: '';
             bottom: 0;

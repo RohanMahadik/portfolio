@@ -37,6 +37,10 @@
     }
     &-primary{
         background-color: $yellow;
+        &:focus{
+            background-color: $yellow;
+            color: $primary;
+        }
         &:hover{
             color: $primary;
         }
@@ -44,6 +48,10 @@
     &-secondry{
         background-color: $secondry;
         color: $primary;
+        &:focus{
+            background-color: $secondry;
+            color: $primary;
+        }
         &:hover{
             color: $primary;
         }
