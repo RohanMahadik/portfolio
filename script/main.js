@@ -1,10 +1,11 @@
 
+// Js for AOS Library
 AOS.init({
-    duration: 1000,  // Animation duration in milliseconds
-    easing: 'ease-in-out', // Type of animation easing
-    once: true, // Animation occurs once when scrolling
+    duration: 1000, 
+    easing: 'ease-in-out', 
+    once: true, 
   });
-  // designation swiper
+// designation swiper
 const swiper = new Swiper('.banner-degswiper', {
     // Optional parameters
     slidesPerView: 1,
@@ -22,28 +23,28 @@ const swiper = new Swiper('.banner-degswiper', {
         el: '.swiper-scrollbar',
     },
 });
+// project swiper
 const Projectswiper = new Swiper('.project-swipercontainer', {
-    // Optional parameters
     slidesPerView: 3,
     spaceBetween: 20, 
     loop: true,
-    speed: 3000, // Speed of the transition (in ms)
+    speed: 3000, 
     autoplay: {
-        delay: 0, // No delay between transitions
-        disableOnInteraction: false, // Keep autoplay active after user interaction
+        delay:3000, 
+        disableOnInteraction: false, 
     },
     navigation: {
         nextEl: ".project-swipercontainer .swiper-button-next",
         prevEl: " .project-swipercontainer .swiper-button-prev",
     },
     breakpoints: {
-        0: { // Below 768px
+        0: { 
           slidesPerView: 1,
         },
-        768: { // Between 768px and 992px
+        768: { 
           slidesPerView: 2,
         },
-        992: { // 992px and above
+        992: { 
           slidesPerView: 3,
         }
       },
@@ -51,6 +52,7 @@ const Projectswiper = new Swiper('.project-swipercontainer', {
         el: '.swiper-scrollbar',
     },
 });
+// Js for Resume Download
 document.addEventListener("DOMContentLoaded", function () {
     function animateCounter(element, start, end, duration) {
         let startTime = null;
@@ -75,7 +77,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function handleScroll() {
-        document.querySelectorAll(".aboutus-number").forEach((el) => {
+        document.querySelectorAll(".aboutus-number,.project-counter").forEach((el) => {
             if (isElementInViewport(el) && !el.dataset.animated) {
                 el.dataset.animated = "true";
                 let endValue = parseInt(el.dataset.number, 10);
@@ -105,6 +107,7 @@ var player = videojs('my-video', {
     fluid: true
 });
 
+// JS For Video Watch
 document.addEventListener("DOMContentLoaded", function () {
     var video = videojs('my-video'); // Initialize Video.js player
     var viewCountElement = document.getElementById("viewCount");
@@ -136,6 +139,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 });
 
+// Js swiper for Work
 if (window.matchMedia('(min-width: 768px)').matches) {
 
     const overyear = new Swiper(".journey-swiper", {
@@ -146,9 +150,9 @@ if (window.matchMedia('(min-width: 768px)').matches) {
             nextEl: ".swiper-button-next",
             prevEl: ".swiper-button-prev",
         },
-        // autoplay: {
-        //     delay: 5000,
-        // },
+        autoplay: {
+            delay: 3000,
+        },
         breakpoints: {
             768: {
                 slidesPerView: 2,
@@ -161,40 +165,9 @@ if (window.matchMedia('(min-width: 768px)').matches) {
             }
         }
     });
-    document.addEventListener("DOMContentLoaded", () => {
-        // Select all div elements
-        const items = document.querySelectorAll(".journey--item");
-
-        // Arrays to hold even and odd indexed div heights
-        let evenHeights = [];
-        let oddHeights = [];
-
-        // Loop through each div to calculate its height
-        items.forEach((item, index) => {
-            const height = item.offsetHeight; // Get the height of the div
-
-            // Separate into even and odd indexed arrays
-            if ((index + 1) % 2 === 0) {
-                evenHeights.push(height);
-            } else {
-                oddHeights.push(height);
-            }
-        });
-
-        // Find the largest height in even and odd arrays
-        const maxEvenHeight = Math.max(...evenHeights);
-        const maxOddHeight = Math.max(...oddHeights);
-        const totalHeight = maxEvenHeight + maxOddHeight;
-
-        // Set the largest heights as CSS variables
-        let slectStyle = document.documentElement.style;
-        slectStyle.setProperty("--max-even-height", `${maxEvenHeight}px`);
-        slectStyle.setProperty("--max-odd-height", `${maxOddHeight}px`);
-        slectStyle.setProperty("--total-height", `${totalHeight}px`);
-    });
-
 }
 
+// Js for showmore or less
 function toggleContent() {
     var list = document.querySelector(".journey-list");
     var btnText = document.getElementById("btn");

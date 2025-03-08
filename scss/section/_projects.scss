@@ -34,4 +34,53 @@
         max-height: 21rem;
         overflow: hidden;
     }
+    &-counterwrapper{
+        margin-top: 6rem;
+        position: relative;
+        bottom: -5rem;
+    }
+    &-counterlist{
+       gap: 2rem;
+       flex-wrap: wrap;
+    }
+    &-counteritem{
+        width: calc(20% - 2rem);
+        background-color: $black;
+        border-radius: .5rem;
+    }
+    &-counter{
+        font-size: 2.2rem;
+        font-weight: 700;
+        color: $yellow;
+    }
+    &-countertitle{
+        color: $secondry;
+        font-weight: 500;
+        font-size: 2rem;
+    }
+    &-github{
+        font-size: 4rem;
+        margin-bottom: 2rem;
+        font-weight:700;
+    }
+    &-gitdatawrapper{
+        padding-block:15rem;
+        background: url('../images/git-section-bg.jpg');
+    }
+    &-gittext{
+        color: $yellow;
+    }   
+}
+@media (max-width:$mobile-max-width) {
+    .project{
+        &-counteritem{
+            width: calc(50% - 2rem);
+        }
+        &-gitdatawrapper{
+            padding-inline: 1rem;
+        }
+        &-counterwrapper{
+            bottom: -12rem;
+        }
+    }
 }

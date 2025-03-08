@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="./scss/style.css">
     
 </head>
-<body>
+<body >
     <!-- Header Section -->
     <header class="sticky-top">
         <nav class="navbar navbar-expand-lg p-0 h-100">
@@ -34,15 +34,16 @@
                         <a class="nav-link " href="#section1">Home</a>
                         <a class="nav-link" href="#section2">About</a>
                         <a class="nav-link" href="#section3">Resume</a>
-                        <a class="nav-link" href="#section4">Project</a>
-                        <a class="nav-link" href="#section5">Client</a>
+                        <a class="nav-link" href="#section4">Client</a>
+                        <a class="nav-link" href="#section5">Project</a>
                         <a class="nav-link" href="#section6">Contact</a>
                     </div>
                 </div>
             </div>
         </nav>
     </header>
-    <main>
+    <main data-bs-spy="scroll" data-bs-target="#myScrollspy" data-bs-root-margin="0px 0px -40%"
+    data-bs-smooth-scroll="true" class="scrollspy-example" tabindex="0">
     <!-- Banner Section -->
     <section class="banner padding-common"  id="section1">
         <div class="container">
@@ -235,7 +236,7 @@
 
 						<div class="aboutus-counter mt-4">
 							<p class="aboutus-counterwrapper mb-4">
-                                <span class="aboutus-number" data-number="30">0</span> <span>+</span>
+                                <span class="aboutus-number" data-number="20">0</span> <span>+</span>
                                 <span class="aboutus-project"> Projects completed</span>
                             </p>
                             <a href="https://www.linkedin.com/in/rohancmahadik/" class="btn btn-primary w-25" target="_blank"><span class="icon-linkedin"></span><span class="btn-text">LinkedIn</span></a>
@@ -646,8 +647,44 @@
                     </div>
                 </div>
             </div>
+
+             <div class="project-counterwrapper">
+              <ul class="project-counterlist d-flex align-items-center justify-content-center">
+                <li class="project-counteritem d-flex flex-wrap align-items-center justify-content-center flex-column gap-3 p-4">
+                    <h3 class="project-counter" data-number="2">
+                        0
+                    </h3>
+                    <p class="project-countertitle">
+                        Achivment
+                    </p>
+                </li>
+                <li class="project-counteritem d-flex align-items-center justify-content-center flex-column gap-3 p-4">
+                    <h3 class="project-counter" data-number="4">
+                        0
+                    </h3>
+                    <p class="project-countertitle">
+                        Happy Client
+                    </p>
+                </li>
+                <li class="project-counteritem d-flex align-items-center justify-content-center flex-column gap-3 p-4">
+                    <h3 class="project-counter" data-number="20">
+                        0
+                    </h3>
+                    <p class="project-countertitle">
+                        Projects
+                    </p>
+                </li>
+              </ul>
+             
+             </div>
            </div>
         </div>
+        <div class="project-gitdatawrapper">
+            <div class="align-items-center col-md-12 d-flex flex-column justify-content-center text-center">
+                <h3 class="project-github">More project on <span class="project-gittext">Github</span></h3>
+                <a href="https://github.com/RohanMahadik" class="btn btn-primary " target="_blank"><span class="icon-github"></span><span class="btn-text">My Work</span></a>
+            </div>
+          </div>
     </section>
 
     </main>

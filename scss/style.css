@@ -542,7 +542,7 @@ footer .footer-hidden {
     height: 100%;
     border: 0;
     border-radius: unset;
-    background: url("/images/pattern.svg") center/100% no-repeat;
+    background: url("../images/pattern.svg") center/100% no-repeat;
     position: relative;
   }
   .aboutus-img img {
@@ -568,7 +568,7 @@ footer .footer-hidden {
     top: 45%;
     left: 45%;
     transform: translate(-50%, -50%);
-    background: #FEBE10 url("/images/mweb-img.png") center/75% no-repeat;
+    background: #FEBE10 url("../images/mweb-img.png") center/75% no-repeat;
   }
 }
 /*Resume section css*/
@@ -658,7 +658,54 @@ footer .footer-hidden {
   max-height: 21rem;
   overflow: hidden;
 }
+.project-counterwrapper {
+  margin-top: 6rem;
+  position: relative;
+  bottom: -5rem;
+}
+.project-counterlist {
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+.project-counteritem {
+  width: calc(20% - 2rem);
+  background-color: #191919;
+  border-radius: 0.5rem;
+}
+.project-counter {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #FEBE10;
+}
+.project-countertitle {
+  color: #ffffff;
+  font-weight: 500;
+  font-size: 2rem;
+}
+.project-github {
+  font-size: 4rem;
+  margin-bottom: 2rem;
+  font-weight: 700;
+}
+.project-gitdatawrapper {
+  padding-block: 15rem;
+  background: url("../images/git-section-bg.jpg");
+}
+.project-gittext {
+  color: #FEBE10;
+}
 
+@media (max-width: 767px) {
+  .project-counteritem {
+    width: calc(50% - 2rem);
+  }
+  .project-gitdatawrapper {
+    padding-inline: 1rem;
+  }
+  .project-counterwrapper {
+    bottom: -12rem;
+  }
+}
 /* Work Journey*/
 .journey-section .swiper-button-prev,
 .journey-section .swiper-button-next {
@@ -910,6 +957,7 @@ footer .footer-hidden {
   align-items: center;
   width: -moz-max-content;
   width: max-content;
+  border-radius: 0.5rem;
 }
 .btn::before {
   content: "";
@@ -919,6 +967,7 @@ footer .footer-hidden {
   top: 0;
   left: 0;
   z-index: 0;
+  border-radius: 0.5rem;
   transition: all 0.25s ease-in-out;
   background: rgb(254, 190, 16);
   background: linear-gradient(56deg, rgb(254, 190, 16) 41%, rgb(254, 216, 110) 64%, rgb(254, 224, 140) 84%, rgb(255, 255, 255) 99%);
