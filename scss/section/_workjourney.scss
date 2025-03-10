@@ -1,11 +1,5 @@
 /* Work Journey*/
 .journey {
-    &-section{
-        .swiper-button-prev,
-        .swiper-button-next{
-           display: none;
-        }
-    }
     &-showmore {
         text-transform: uppercase;
         margin: 0 auto;
